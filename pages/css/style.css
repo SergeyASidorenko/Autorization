@@ -1,0 +1,91 @@
+html {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(ellipse at 100% 0, rgb(63, 172, 0), transparent), radial-gradient(ellipse at 0 100%, rgb(187, 201, 0), transparent);
+}
+
+h1, h2, h3, h4 {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+}
+
+a.logout {
+    color: #eee;
+    background-color: #333;
+    display: block;
+    width: 100px;
+    padding: 5px 20px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.content {
+    max-width: 800px;
+    margin: 10px auto;
+}
+
+.menu {
+    padding: 0;
+    margin: 20px auto;
+    display: block;
+    list-style-type: none;
+    text-align: center;
+}
+
+.menu li {
+    margin: 0 10px;
+    background-color: #eee;
+    display: inline-block;
+}
+
+.menu li a {
+    padding: 5px 10px;
+    display: inline-block;
+    width: 170px;
+}
+
+.menu li:hover {
+    background-color: #ccc;
+}
+
+form {
+    display: block;
+    margin: 10px auto;
+    min-width: 200px;
+    max-width: 300px;
+    border: 1px solid #333;
+    background-color: #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+form input {
+    display: block;
+    margin: 10px auto;
+    border: 1px solid #333;
+    padding: 5px;
+}
+
+form label, form input[type=checkbox] {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+input[type=submit] {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+p.error {
+    color: tomato;
+    text-align: center;
+    border: 1px solid tomato;
+    background-color: #eee;
+    padding: 5px 0;
+}

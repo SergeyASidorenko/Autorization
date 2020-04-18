@@ -1,0 +1,27 @@
+html {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(ellipse at 100% 0, rgb(214, 139, 0), transparent), radial-gradient(ellipse at 0 100%, rgb(248, 190, 0), transparent);
+}
+
+h1, h2, h3, h4 {
+    text-align: center;
+}
+
+a.logout {
+    text-decoration: none;
+    color: #eee;
+    background-color: #333;
+    display: block;
+    width: 100px;
+    cursor: pointer;
+    padding: 5px 20px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+section.content {
+    max-width: 800px;
+    margin: 10px auto;
+}

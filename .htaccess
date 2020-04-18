@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+</IfModule>
+<IfModule mod_rewrite.c>
+    RewriteCond %{REQUEST_URI} ^/(css|js|img|fonts)
+    RewriteRule ^css/(.*)$ pages/css/$1 [L]
+    RewriteRule ^js/(.*)$ pages/js/$1 [L]
+    RewriteRule ^img/(.*)$ pages/img/$1 [L]
+    RewriteRule ^fonts/(.*)$ pages/fonts/$1 [L]
+    RewriteCond %{REQUEST_URI} !^/pages/(css|js|img|fonts)/
+    RewriteRule ^.*$ main.php
+</IfModule>
