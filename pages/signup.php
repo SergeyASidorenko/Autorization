@@ -33,7 +33,7 @@ if (
         $_SESSION['forms']['signup_error'] = $e->getMessage();
         $_SESSION['forms']['signup_username'] = $_POST['username'];
         if ($_POST['password'] != '') {
-            $_SESSION['forms']['signin_password'] = $_POST['password'];
+            $_SESSION['forms']['signup_password'] = $_POST['password'];
         }
         App::getInstance()->redirect('signup');
     }

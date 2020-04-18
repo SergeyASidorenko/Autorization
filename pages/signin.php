@@ -8,7 +8,6 @@ use engine\tables\User;
 $signinFormID = '';
 $isRememberMe = false;
 if (isset($_SESSION['forms']['signin_form_id'])) {
-
     $signinFormID = $_SESSION['forms']['signin_form_id'];
 }
 if (!isset($_SESSION['forms'])) {

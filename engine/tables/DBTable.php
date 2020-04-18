@@ -78,4 +78,14 @@ abstract class DBTable
      * Метод валидации полей записи
      */
     abstract public function validate();
+    /**
+     * Метод добавления/обновления записи
+     */
+    abstract public function save();
+    /**
+     * Метод производит поиск записи типа User по заданным параметрам
+     * @param array $params массив параметров.
+     * @return User значение поля
+     */
+    abstract public static function find(array $params);
 }

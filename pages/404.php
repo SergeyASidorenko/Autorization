@@ -1,8 +1,11 @@
 <?php require 'header.php' ?>
 
 <body>
-    <p class="error404">Страница не найдена</p>
-    <p><a href="/" title="На главную">На главную</a></p>
+    <div class="page_not_found">
+        <p class="error">Страница не найдена</p>
+        <p class="logo">404 Not Found</p>
+        <a href="/" title="На главную">На главную</a>
+    </div>
 </body>
 
 </html>

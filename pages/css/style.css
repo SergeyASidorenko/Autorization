@@ -89,3 +89,11 @@ p.error {
     background-color: #eee;
     padding: 5px 0;
 }
+
+.page_not_found, .page_server_error {
+    text-align: center;
+}
+
+.page_not_found .logo, .page_server_error .logo {
+    font-size: 38px;
+}

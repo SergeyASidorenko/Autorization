@@ -44,9 +44,7 @@ class User extends DBTable
         $this->password = App::getInstance()->hashPassword($password);
     }
     /**
-     * Метод производит поиск записи типа User по заданным параметрам
-     * @param array $params массив параметров.
-     * @return User значение поля
+     * {@inheritdoc}
      */
     public static function find(array $params)
     {
@@ -80,7 +78,7 @@ class User extends DBTable
         return $user;
     }
     /**
-     * Метод добавления/обновления записи
+     * {@inheritdoc}
      */
     public function save()
     {
@@ -117,12 +115,12 @@ class User extends DBTable
      */
     public function validate()
     {
-        $this->name = preg_replace('/^[^\w]$/', '', $_POST['username']);
+        $this->name = preg_replace('/^[^\w]$/', '', $this->name);
         if (!preg_match('/[^\x00-\x1f]{2,}/', $this->name)) {
-            throw new WebError("Поле \"Имя пользователя\" заполнено неверно!");
+            throw new WebError("Поле \"Имя пользователя\" заполнено неверно! Имя не должно быть короче 2 символов");
         }
         if (!preg_match('/[^\x00-\x1f]{6,}/', $this->password)) {
-            throw new WebError("Поле \"Пароль\" заполнено неверно!");
+            throw new WebError("Поле \"Пароль\" заполнено неверно! Пароль короче 6 символов");
         }
     }
 }
