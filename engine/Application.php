@@ -167,10 +167,11 @@ class Application
      */
     public function redirect($url, $isLogOut = false)
     {
-        http_response_code(301);
         if ($isLogOut) {
             setcookie('user_id', "", time() - 3600);
             setcookie('secret', "", time() - 3600);
+        } else {
+            http_response_code(301);
         }
         header("Location: $url");
         exit();

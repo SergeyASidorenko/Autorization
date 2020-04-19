@@ -45,7 +45,7 @@ class User
      */
     public function isGuest()
     {
-        return empty($this->userName);
+        return $this->id <= 0;
     }
     /**
      * Метод возвращает логин текущего пользователя

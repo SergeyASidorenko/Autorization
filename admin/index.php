@@ -16,7 +16,7 @@ use engine\Application as App;
 <body>
     <section class="content">
         <a href="/logout" class="logout">Выйти</a>
-        <h3><?= App::getInstance()->getUser()->getUserName() . ', '; ?>добро пожаловать в административную часть</h3>
+        <h3><?= htmlentities(App::getInstance()->getUser()->getUserName()) . ', '; ?>добро пожаловать в административную часть</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Excepturi reiciendis, non magnam enim tempore magni reprehenderit
             saepe asperiores deserunt debitis error et quia.
